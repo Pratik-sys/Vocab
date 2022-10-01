@@ -33,14 +33,22 @@ export const Vocab = () => {
   return (
     <div className="Words">
       {result.length !== 0 ? (
-        <Card style={{width:'18rem'}}>
-          <Card.Body >
+        <Card style={{ width: "18rem" }}>
+          <Card.Body>
             <Card.Subtitle>{JSON.stringify(result[0].word)} </Card.Subtitle>
             <Card.Text>
-                {JSON.stringify(result[0].meanings[0].definitions[0].definition)}
-                <br></br>
-                {JSON.stringify(result[0].meanings[0].definitions[1].definition)}
+              {JSON.stringify(result[0].meanings[0].definitions[0].definition)}
+              <br></br>
+              {JSON.stringify(result[0].meanings[0].definitions[1].definition)}
             </Card.Text>
+            <Card.Link>
+              <SayButton
+                onClick={(event) => console.log(event)}
+                speak={result[0].word}
+              >
+                text-to-speech
+              </SayButton>
+            </Card.Link>
           </Card.Body>
         </Card>
       ) : // <p>
