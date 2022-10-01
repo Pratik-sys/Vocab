@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { SayButton } from "react-say";
 import { useEffect, useState } from "react";
 export const Vocab = () => {
   const [result, setResult] = useState([]);
