@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { SayButton } from "react-say";
 import { useEffect, useState } from "react";
+import Card from "react-bootstrap/Card";
+
 export const Vocab = () => {
   const [result, setResult] = useState([]);
   const getRandomDefination = () => {
@@ -31,16 +33,26 @@ export const Vocab = () => {
   return (
     <div className="Words">
       {result.length !== 0 ? (
-        <p>
-          {JSON.stringify(result[0])}{" "}
-          <SayButton
-            onClick={(event) => console.log(event)}
-            speak={result[0].word}
-          >
-            bol
-          </SayButton>
-        </p>
-      ) : null}
+        <Card style={{width:'18rem'}}>
+          <Card.Body >
+            <Card.Subtitle>{JSON.stringify(result[0].word)} </Card.Subtitle>
+            <Card.Text>
+                {JSON.stringify(result[0].meanings[0].definitions[0].definition)}
+                <br></br>
+                {JSON.stringify(result[0].meanings[0].definitions[1].definition)}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      ) : // <p>
+      //   {JSON.stringify(result[0])}{" "}
+      //   <SayButton
+      //     onClick={(event) => console.log(event)}
+      //     speak={result[0].word}
+      //   >
+      //     bol
+      //   </SayButton>
+      // </p>
+      null}
     </div>
   );
 };
