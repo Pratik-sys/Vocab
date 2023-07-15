@@ -1,12 +1,9 @@
 const express = require("express");
-
 const app = express();
+const vocabroute = require("./routes/index")
 
-
-app.use("/", (req, res)=>{
-    res.send("<h1> Say hello to new app!!<h1>")
-})
+app.use("/", vocabroute);
 
 app.listen(3000, ()=>{
-    console.log("listeningon port 3000")
+    console.log("listening on port 3000")
 })
