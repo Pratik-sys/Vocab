@@ -1,0 +1,41 @@
+"r": [
+    {
+        "partOfSpeech": "noun",
+        "definitions": [
+            {
+                "definition": "A person who flees or escapes and travels secretly from place to place, and sometimes using disguises and aliases to conceal his/her identity, as to avoid law authorities in order to avoid an arrest or prosecution; or to avoid some other unwanted situation.",
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "synonyms": [
+            "abscotchalater",
+            "nomad",
+            "runaway",
+            "wanderer"
+        ],
+        "antonyms": []
+    },
+    {
+        "partOfSpeech": "adjective",
+        "definitions": [
+            {
+                "definition": "Fleeing or running away",
+                "synonyms": [],
+                "antonyms": []
+            },
+            {
+                "definition": "Transient, fleeting or ephemeral",
+                "synonyms": [],
+                "antonyms": []
+            },
+            {
+                "definition": "Elusive or difficult to retain",
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "synonyms": [],
+        "antonyms": []
+    }
+],

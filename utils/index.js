@@ -1,4 +1,5 @@
 const fs = require("fs");
+const axios = require("axios");
 
 exports.FetchRandomWord = () => {
   try {
@@ -16,7 +17,7 @@ exports.getDictRecords = async () => {
   try {
     const word = this.FetchRandomWord()
     const result = await axios.get(
-    `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${"fugitive"}`
    );
    return result.data;
   } catch(error) {
