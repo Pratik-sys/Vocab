@@ -18,9 +18,10 @@ router.get("/",async (req, res) => {
     "Meaning": records[0].meanings[0].definitions[0].definition,
     "Synonyms": records[0].meanings[0].synonyms
   } 
-  return res.status(200).json({
-    result : dictRecords ,
-  });
+  res.render("index", {records: dictRecords});
+  // return res.status(200).json({
+  //   result : dictRecords ,
+  // });
 });
 
 module.exports = router;
