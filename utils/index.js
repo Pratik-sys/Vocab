@@ -12,4 +12,16 @@ exports.FetchRandomWord = () => {
   }
 }
 
+exports.getDictRecords = async () => {
+  try {
+    const word = this.FetchRandomWord()
+    const result = await axios.get(
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+   );
+   return result.data;
+  } catch(error) {
+    console.log(error);
+  }
+};
+
 
