@@ -19,7 +19,7 @@ exports.getDictRecords = async () => {
     const result = await axios.get(
     `https://api.dictionaryapi.dev/api/v2/entries/en/${"fugitive"}`
    );
-   return result.data;
+   return result.data[0];
   } catch(error) {
     console.log(error);
   }
