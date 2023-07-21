@@ -17,11 +17,11 @@ exports.getDictRecords = async () => {
   try {
     const word = this.FetchRandomWord()
     const result = await axios.get(
-    `https://api.dictionaryapi.dev/api/v2/entries/en/${this.FetchRandomWord()}`
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${"herbar"}`
    );
-   return result.data[0];
+    return result.data[0];
   } catch(error) {
-    console.log(error);
+    return [error.response.status, error.response.data];
   }
 };
 
