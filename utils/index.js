@@ -17,7 +17,7 @@ exports.getDictRecords = async () => {
   try {
     const word = this.FetchRandomWord()
     const result = await axios.get(
-    `https://api.dictionaryapi.dev/api/v2/entries/en/${"herbar"}`
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${"ails"}`
    );
     return result.data[0];
   } catch(error) {
