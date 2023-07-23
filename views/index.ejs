@@ -15,9 +15,13 @@
             <h5> <%= records.Word %> </h5>
             <% Object.keys(records.Meaning).forEach(ele => { %>
               <h5> <%= ele %> </h5>
-              <ul>
-                <li> <%= records.Meaning[ele] %> </li>
-              </ul>
+              <% records.Meaning[ele].forEach(x =>{ %>
+                  <ul>
+                    <li>
+                      <%= x %>
+                    </li>
+                  </ul>
+              <% }) %>
             <% }) %>
          <% } else{ %>
           <% Object.keys(records[1]).forEach(x =>{ %>
