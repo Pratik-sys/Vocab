@@ -22,13 +22,14 @@ router.get("/", async (req, res) => {
         Meaning: trimdefiniton,
         Synonyms: trimSynonyms,
       };
-      return res.render("index", { records: dictRecords });
-      // return res.status(200).json({
-      //   dictRecords
-      // })
+      return res.status(200).json({
+        dictRecords
+      })
     } else {
-      return res.render("index", { records: records })   
-    }
+      return res.status(401)
+.json({
+  Msg: "Something bad happened"
+})    }
   } catch (error) {
     console.log(error);
   }
