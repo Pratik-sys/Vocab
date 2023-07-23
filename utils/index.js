@@ -5,7 +5,7 @@ exports.FetchRandomWord = () => {
   try {
     const fileData = fs.readFileSync("./utils/Words.txt", "utf-8");
     const splitwords = fileData.split("\n");
-    var getrandomnum = Math.floor(Math.random() * splitwords.length) + 1;
+    const getrandomnum = Math.floor(Math.random() * splitwords.length) + 1;
     const res = splitwords[getrandomnum];
     return res;
   } catch(error) {
@@ -17,12 +17,10 @@ exports.getDictRecords = async () => {
   try {
     const word = this.FetchRandomWord()
     const result = await axios.get(
-    `https://api.dictionaryapi.dev/api/v2/entries/en/${"ails"}`
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${this.FetchRandomWord()}`
    );
     return result.data[0];
   } catch(error) {
     return [error.response.status, error.response.data];
   }
 };
-
-
