@@ -1,5 +1,5 @@
 const express = require("express");
-const { getDictRecords } = require("../utils");
+const { getDictRecords, FetchRandomWord } = require("../utils");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -23,16 +23,24 @@ router.get("/", async (req, res) => {
         Synonyms: trimSynonyms,
       };
       return res.status(200).json({
-        dictRecords
-      })
+        dictRecords,
+      });
     } else {
-      return res.status(401)
-.json({
-  Msg: "Something bad happened"
-})    }
+      return res.status(401).json({
+        Msg: "Something bad happened",
+      });
+    }
   } catch (error) {
     console.log(error);
   }
 });
 
+router.get("/newword", (req, res) => {
+  try {
+    const NewWord = FetchRandomWord();
+    return res.status(200).json({ word : NewWord.trim()});
+  } catch (error) {
+    console.log(error);
+  }
+});
 module.exports = router;
