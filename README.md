@@ -1,3 +1,3 @@
 # Vocab Cards
 
-- Node based MVC application to view rendered card with new words randomly.
+- Node based Rest API project to fetch a random word from compiled set of words.
