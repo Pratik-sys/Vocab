@@ -10,7 +10,7 @@
 
 ---
 
-## Usage
+## Endpoints
 
 - To fetch random word
 
